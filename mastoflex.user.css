@@ -1,0 +1,31 @@
+/* ==UserStyle==
+@name           Mastoflex
+@namespace      https://github.com/imathew
+@version        1.0.0
+@description    Widens labelled Mastodon columns to take up the full browser width (when using the advanced web interface) and sets a narrower drawer (compose toot) width.
+@author         Mathew Inkson (https://aus.social/@imathew)
+@homepageURL    https://github.com/imathew/usercss
+@supportURL     https://github.com/imathew/usercss/issues
+@updateURL      https://github.com/imathew/usercss/mastoflex.user.css
+@license        Unlicense
+@preprocessor   default
+==/UserStyle== */
+
+/* Change the url-prefix to your instance details */
+@-moz-document url-prefix("https://aus.social/web/") {
+	/* make labelled columns flexible and set their min-width to their previous default width */
+	/* unlabelled columns (getting started, bookmarks, favs, lists, individual user streams) will remain at the default width */
+	.column[aria-label]:not(
+		/* any columns added here will remain the default width and not grow */
+		[aria-label="Notifications"]
+	){
+		resize: horizontal;
+		flex: 1 1 auto;
+		min-width: 350px;
+	}
+
+	/* set a narrower size on the drawer (compose toot) to save space */
+	.drawer {
+		width: 240px;
+	}
+}
