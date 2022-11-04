@@ -11,8 +11,8 @@
 @preprocessor   default
 ==/UserStyle== */
 
-/* Change the url-prefix to your instance details */
-@-moz-document url-prefix("https://aus.social/web/") {
+/* Change the domain to your instance */
+@-moz-document domain("aus.social") {
 	/* make labelled columns flexible and set their min-width to their previous default width */
 	/* unlabelled columns (getting started, bookmarks, favs, lists, individual user streams) will remain at the default width */
 	.column[aria-label]:not(
