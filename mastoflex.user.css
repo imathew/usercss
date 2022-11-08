@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Mastoflex
 @namespace      https://github.com/imathew
-@version        1.0.0
+@version        1.0.1
 @description    Widens labelled Mastodon columns to take up the full browser width (when using the advanced web interface) and sets a narrower drawer (compose toot) width.
 @author         Mathew Inkson (https://aus.social/@imathew)
 @homepageURL    https://github.com/imathew/usercss
@@ -27,5 +27,16 @@
 	/* set a narrower size on the drawer (compose toot) to save space */
 	.drawer {
 		width: 240px;
+	}
+
+	/* reduce padding around columns to save even more space */
+	.column, .drawer {
+		padding: 2px 1px;
+	}
+	.column:first-child, .drawer:first-child {
+		padding-left: 2px;
+	}
+	.column:last-child, .drawer:last-child {
+		padding-right: 2px;
 	}
 }
