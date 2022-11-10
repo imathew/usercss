@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Mastoflex
 @namespace      https://github.com/imathew
-@version        1.0.1
+@version        1.0.2
 @description    Widens labelled Mastodon columns to take up the full browser width (when using the advanced web interface) and sets a narrower drawer (compose toot) width.
 @author         Mathew Inkson (https://aus.social/@imathew)
 @homepageURL    https://github.com/imathew/usercss
@@ -38,5 +38,14 @@
 	}
 	.column:last-child, .drawer:last-child {
 		padding-right: 2px;
+	}
+
+	/* use a set of fonts that are easier on the eye and adjust some weights/sizes accordingly */
+	body {
+		font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Ubuntu,Helvetica Neue,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Arial,ヒラギノ角ゴ Pro W3,Hiragino Kaku Gothic Pro,メイリオ,Meiryo,ＭＳ Ｐゴシック,MS PGothic;
+	}
+	.notification__display-name,
+	strong {
+		font-weight: 600 !important;
 	}
 }
