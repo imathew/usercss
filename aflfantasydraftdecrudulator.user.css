@@ -1,0 +1,53 @@
+/* ==UserStyle==
+@name           AFL Fantasy Draft Decrudulator
+@namespace      https://github.com/imathew
+@version        1.0.0
+@description    Work in progress. Currently only removes the header and footer of the whole site, and trims down the matchup page to the bare essentials.
+@author         Mathew Inkson (https://aus.social/@imathew)
+@homepageURL    https://github.com/imathew/usercss
+@supportURL     https://github.com/imathew/usercss/issues
+@updateURL      https://raw.githubusercontent.com/imathew/usercss/main/aflfantasydraftdecrudulator.user.css
+@license        Unlicense
+@preprocessor   default
+==/UserStyle== */
+
+@-moz-document url-prefix("https://fantasy.afl.com.au/draft") {
+    header,
+    footer,
+    iframe {
+        display: none !important;
+    }
+}
+
+@-moz-document url-prefix("https://fantasy.afl.com.au/draft/league/3941/fantasy-matchups") {
+    aside,
+    main > div:nth-child(1) > div,
+    main > div:nth-child(2),
+    main > div:nth-child(3),
+    main > div:nth-child(4),
+    main > div:nth-child(5),
+    main > div:nth-child(6) > div > div > div:nth-child(1),
+    main > div:nth-child(6) > div > div > div:nth-child(3),
+    main > div:nth-child(8) {
+        display: none !important;
+    }
+
+    html {
+        margin: 10px 0;
+    }
+    main > div:nth-child(1) {
+        height: 0;
+    }
+    main > div:nth-child(6) {
+        margin: 0;
+        padding: 0;
+        max-width: 100%;
+    }
+    main > div:nth-child(6) > div > div {
+        margin: 0;
+        width: 100% !important;
+    }
+    main > div:nth-child(6) > div > div > div:nth-child(2) {
+        margin-bottom: 0;
+    }
+}
