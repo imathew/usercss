@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           AFL Fantasy Draft Decrudulator
 @namespace      https://github.com/imathew
-@version        1.0.0
+@version        1.0.1
 @description    Work in progress. Currently only removes the header and footer of the whole site, and trims down the matchup page to the bare essentials.
 @author         Mathew Inkson (https://aus.social/@imathew)
 @homepageURL    https://github.com/imathew/usercss
@@ -49,5 +49,6 @@
     }
     main > div:nth-child(6) > div > div > div:nth-child(2) {
         margin-bottom: 0;
+        padding: 5px 20px;
     }
 }
