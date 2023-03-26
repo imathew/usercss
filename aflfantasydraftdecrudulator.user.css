@@ -2,7 +2,7 @@
 @name           AFL Fantasy Draft Decrudulator
 @namespace      https://github.com/imathew
 @version        1.0.1
-@description    Work in progress. Currently only removes the header and footer of the whole site, and trims down the matchup page to the bare essentials.
+@description    Makes the AFL Fantasy site less annoying. Provides additional styling on top of the blocking already conducted with uBlock Origin and some of the rules in https://www.mathewinkson.com/block.txt (desktop version) or https://www.mathewinkson.com/blockm.txt (mobile version)
 @author         Mathew Inkson (https://aus.social/@imathew)
 @homepageURL    https://github.com/imathew/usercss
 @supportURL     https://github.com/imathew/usercss/issues
@@ -11,27 +11,7 @@
 @preprocessor   default
 ==/UserStyle== */
 
-@-moz-document url-prefix("https://fantasy.afl.com.au/draft") {
-    header,
-    footer,
-    iframe {
-        display: none !important;
-    }
-}
-
-@-moz-document url-prefix("https://fantasy.afl.com.au/draft/league/3941/fantasy-matchups") {
-    aside,
-    main > div:nth-child(1) > div,
-    main > div:nth-child(2),
-    main > div:nth-child(3),
-    main > div:nth-child(4),
-    main > div:nth-child(5),
-    main > div:nth-child(6) > div > div > div:nth-child(1),
-    main > div:nth-child(6) > div > div > div:nth-child(3),
-    main > div:nth-child(8) {
-        display: none !important;
-    }
-
+@-moz-document url-prefix("https://fantasy.afl.com.au/draft/league/3941/fantasy-matchups"), url-prefix("https://fantasy.afl.com.au/draft/league/3941/afl-matchups") {
     html {
         margin: 10px 0;
     }
@@ -50,5 +30,11 @@
     main > div:nth-child(6) > div > div > div:nth-child(2) {
         margin-bottom: 0;
         padding: 5px 20px;
+    }
+}
+
+@-moz-document url-prefix("https://fantasy.afl.com.au/draft/league/3941/afl-matchups") {
+    main > div:nth-child(6) > div > div > div:nth-child(2) > div:nth-child(2) {
+        margin: -10px 0;
     }
 }
